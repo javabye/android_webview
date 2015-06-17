@@ -7,7 +7,7 @@
             android:id="@+id/show_logo"
             layout="@layout/splash"/>
 
-    <LinearLayout
+    <RelativeLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
@@ -16,7 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/webView"/>
-    </LinearLayout>
+
+        <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在加载..."
+                android:textColor="@android:color/black"
+                android:id="@+id/loadingText"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
 
