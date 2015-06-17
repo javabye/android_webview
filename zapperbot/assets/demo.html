@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        //JavaScript方法，弹出对话框显示信息
+        function myFunction(text) {
+            alert("this is " + text);
+        }
+
+        //调用绑定的Java对象的方法，即调用Android代码显示对话框
+        function showAndroidToast(toast) {
+            //注意此处的myInterfaceName要和外部传入的名字一致，大小写正确
+            myInterfaceName.showToast(toast);
+        }
+
+        function changeView(){
+            myInterfaceName.changeView();
+        }
+    </script>
+</head>
+    <body>
+    <p>
+        <button onclick="myFunction('demo')">调用本页面的函数</button>
+    </p>
+    <p>
+        用JavaScript按钮调用Android代码 <br/>
+        <input type="button" value="JavaScript调用Android方法showToast" onClick="showAndroidToast('Hello Android!')"/>
+    </p>
+    <p>
+        <input type="button" value="JavaScript调用Android方法changeView" onClick="changeView()"/>
+    </p>
+    </body>
+</html>
